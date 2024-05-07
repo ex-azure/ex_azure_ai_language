@@ -39,8 +39,13 @@ defmodule ExAzure.Ai.Language.TextAnalysis.Results.EntityRecognitionResults do
 
   @type statistics() :: %{}
 
+  @type results() :: %{
+          errors: list(errors()),
+          documents: list(documents())
+        }
+
   @type t() :: %{
           kind: String.t(),
-          results: list(documents())
+          results: results()
         }
 end
